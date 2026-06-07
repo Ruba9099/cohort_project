@@ -26,7 +26,7 @@ export default function Cart() {
 
   return (
     <StoreLayout>
-      <Head><title>Cart | Cohort Store</title></Head>
+      <Head><title>Cart | Brand Store</title></Head>
       <main>
         <section className="section">
           <div className="section-heading">

@@ -15,7 +15,7 @@ export default function Orders() {
 
   return (
     <StoreLayout>
-      <Head><title>Orders | Cohort Store</title></Head>
+      <Head><title>Orders | Brand Store</title></Head>
       <main>
         <section className="section">
           <div className="section-heading">

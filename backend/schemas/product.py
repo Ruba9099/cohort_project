@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Optional
+from typing import List, Optional
 
 from pydantic import BaseModel
 
@@ -9,6 +9,8 @@ class ProductCreate(BaseModel):
     description: str
     price: float
     image_url: Optional[str] = None
+    images: Optional[List[str]] = None
+    category: Optional[str] = None
     stock: int = 0
 
 
@@ -17,6 +19,8 @@ class ProductUpdate(BaseModel):
     description: Optional[str] = None
     price: Optional[float] = None
     image_url: Optional[str] = None
+    images: Optional[List[str]] = None
+    category: Optional[str] = None
     stock: Optional[int] = None
 
 
@@ -26,5 +30,7 @@ class ProductOut(BaseModel):
     description: str
     price: float
     image_url: Optional[str] = None
+    images: Optional[List[str]] = None
+    category: Optional[str] = None
     stock: int
     created_at: datetime

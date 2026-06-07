@@ -43,7 +43,7 @@ export default function StoreLayout({ children }) {
     <>
       <header className="site-header">
         <Link className="brand" href="/">
-          Cohort Store
+          Brand Store
         </Link>
         <nav className="nav-links" aria-label="Primary navigation">
           <Link href="/products">Shop</Link>
@@ -72,7 +72,7 @@ export default function StoreLayout({ children }) {
 
       <footer className="site-footer">
         <div>
-          <strong>Cohort Store</strong>
+          <strong>Brand Store</strong>
           <p>Premium everyday products, simple checkout, and fast order tracking.</p>
         </div>
         <div>

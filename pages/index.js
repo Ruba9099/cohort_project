@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <StoreLayout>
       <Head>
-        <title>Cohort Store | Premium Ecommerce</title>
+        <title>Brand Store | Premium Ecommerce</title>
         <meta name="description" content="A polished full-stack ecommerce store with catalog, cart, checkout, and orders." />
       </Head>
 

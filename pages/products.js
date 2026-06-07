@@ -25,7 +25,7 @@ export default function Products() {
 
   return (
     <StoreLayout>
-      <Head><title>Products | Cohort Store</title></Head>
+      <Head><title>Products | Brand Store</title></Head>
       <main>
         <section className="section">
           <div className="section-heading">

@@ -14,7 +14,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Cohort Store API",
+    title="Brand Store API",
     description="Simple e-commerce REST API. Use the **Authorize** button to paste a Bearer token after login.",
     version="1.0.0",
     lifespan=lifespan,
@@ -38,7 +38,7 @@ app.include_router(orders.router,   prefix="/api/orders",   tags=["Orders"])
 @app.get("/", tags=["Health"])
 def root():
     return {
-        "message": "Cohort Store API",
+        "message": "Brand Store API",
         "docs": "/docs",
         "redoc": "/redoc",
     }

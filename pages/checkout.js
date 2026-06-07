@@ -42,7 +42,7 @@ export default function Checkout() {
 
   return (
     <StoreLayout>
-      <Head><title>Checkout | Cohort Store</title></Head>
+      <Head><title>Checkout | Brand Store</title></Head>
       <main>
         <section className="account-checkout">
           <section className="panel">

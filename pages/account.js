@@ -32,7 +32,7 @@ export default function Account() {
 
   return (
     <StoreLayout>
-      <Head><title>Account | Cohort Store</title></Head>
+      <Head><title>Account | Brand Store</title></Head>
       <main>
         <section className="section" style={{ maxWidth: 480, margin: '0 auto' }}>
           <div className="section-heading compact">
