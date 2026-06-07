@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
-    "api": "python app.py",
+    "api": "python -m uvicorn backend.main:app --reload --port 8000",
+    "dev:all": "concurrently -n FE,BE -c green,cyan \"npm run dev\" \"npm run api\"",
     "build": "next build",
     "start": "next start"
   },
@@ -12,5 +13,8 @@
     "next": "14.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

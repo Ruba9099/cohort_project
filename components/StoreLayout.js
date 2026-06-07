@@ -75,10 +75,12 @@ export default function StoreLayout({ children }) {
           <strong>Brand Store</strong>
           <p>Premium everyday products, simple checkout, and fast order tracking.</p>
         </div>
-        <div>
-          <span>{cartCount} items</span>
-          <strong>{currency(cartTotal)}</strong>
-        </div>
+        <nav className="footer-nav">
+          <Link href="/products">Shop</Link>
+          <Link href="/cart">Cart</Link>
+          <Link href="/orders">Orders</Link>
+          <Link href="/account">Account</Link>
+        </nav>
       </footer>
     </>
   );
