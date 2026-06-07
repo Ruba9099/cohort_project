@@ -3,11 +3,19 @@
 .env.local
 .env.*.local
 
-# Node modules
+# Dependencies
 node_modules/
 
-# Log files
+# Next.js build output
+.next/
+out/
+
+# Local logs
 *.log
 *.err.log
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
 logs/
-.next/
