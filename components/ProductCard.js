@@ -33,8 +33,12 @@ export default function ProductCard({ product, onMessage }) {
   return (
     <article className="product-card">
       <div className="product-image-wrap">
-        <img src={product.image_url} alt={product.name} />
-        <span>{product.category || 'Featured'}</span>
+        <img
+          src={product.image_url || 'https://placehold.co/900x675/e8f5e9/0d6b57?text=No+Image'}
+          alt={product.name}
+          onError={(e) => { e.currentTarget.src = 'https://placehold.co/900x675/e8f5e9/0d6b57?text=No+Image'; }}
+        />
+        <span className="category-badge">{product.category || 'Featured'}</span>
       </div>
       <div className="product-body">
         <div>

@@ -405,13 +405,16 @@ def init_db():
             """)
 
             cur.execute("SELECT COUNT(*) FROM products")
-            if cur.fetchone()[0] == 0:
+            count = cur.fetchone()[0]
+            if count != len(_SEED):
+                # Wrong product count (old placeholders or empty) — reseed from scratch
+                cur.execute("TRUNCATE products RESTART IDENTITY CASCADE")
                 psycopg2.extras.execute_batch(cur, """
                     INSERT INTO products (name, description, price, image_url, images, category, stock)
                     VALUES (%s, %s, %s, %s, %s, %s, %s)
                 """, _SEED)
             else:
-                # Refresh images/category for existing rows so re-seeding is not required
+                # Right count — just refresh images/category so no DB wipe is needed
                 psycopg2.extras.execute_batch(cur, """
                     UPDATE products SET image_url = %s, images = %s, category = %s WHERE name = %s
                 """, [(p[3], p[4], p[5], p[0]) for p in _SEED])
